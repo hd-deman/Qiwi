@@ -53,7 +53,7 @@ class Server extends \SoapServer
         $this->callback = null;
     }
 
-    public function updateBill(S\UpdateBillResponse $param)
+    public function updateBill(\stdClass $param)
     {
         // Проверки подписи
         if ($param->login != $this->login) {
